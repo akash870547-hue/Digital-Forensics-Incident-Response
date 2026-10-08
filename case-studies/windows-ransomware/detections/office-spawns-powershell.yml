@@ -1,0 +1,28 @@
+title: Suspicious Office Child Process - PowerShell
+id: 8f5c2e1d-8c32-4c4b-9a7a-9a2a3a6b2b01
+status: experimental
+description: Detects Office applications launching PowerShell, a high-value behavioral signal for suspicious document-based execution.
+author: Akash Saraswat
+date: 2026/10/08
+tags:
+  - attack.execution
+  - attack.t1059.001
+logsource:
+  product: windows
+  category: process_creation
+detection:
+  parent_office:
+    ParentImage|endswith:
+      - '\WINWORD.EXE'
+      - '\EXCEL.EXE'
+      - '\POWERPNT.EXE'
+      - '\MSACCESS.EXE'
+  child_powershell:
+    Image|endswith:
+      - '\powershell.exe'
+      - '\pwsh.exe'
+  condition: parent_office and child_powershell
+falsepositives:
+  - Authorized document automation
+  - Enterprise macros with PowerShell-based administration
+level: high
