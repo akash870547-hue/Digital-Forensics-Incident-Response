@@ -1,0 +1,26 @@
+name: DFIR Case Validation
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Compile analysis scripts
+        run: python -m py_compile scripts/*.py
+
+      - name: Validate synthetic case
+        run: python scripts/validate_case.py
+
+      - name: Validate IOC JSON
+        run: python -m json.tool case-studies/windows-ransomware/ioc/indicators.json >/dev/null
