@@ -43,9 +43,12 @@ A simulated Windows 11 endpoint incident in which a user opens a phishing attach
 .
 ├── case-studies/
 │   └── windows-ransomware/
+│       ├── README.md
 │       ├── case-notes.md
 │       ├── attack-to-evidence.md
 │       ├── lessons-learned.md
+│       ├── detections/
+│       │   └── office-spawns-powershell.yml
 │       ├── evidence/
 │       │   ├── README.md
 │       │   ├── collection-manifest.csv
@@ -60,7 +63,8 @@ A simulated Windows 11 endpoint incident in which a user opens a phishing attach
 ├── docs/
 │   ├── methodology.md
 │   ├── evidence-handling.md
-│   └── analyst-checklist.md
+│   ├── analyst-checklist.md
+│   └── detection-engineering.md
 ├── scripts/
 │   ├── build_timeline.py
 │   ├── extract_iocs.py
@@ -140,7 +144,7 @@ Those gaps are documented rather than hidden.
 - Add browser and Windows Registry artifacts
 - Add richer Windows Event/Sysmon parsers
 - Add network/PCAP-based investigation
-- Add detection engineering artifacts such as Sigma rules
+- Expand detection coverage with additional Sigma rules
 - Add cross-case IOC and ATT&CK reporting
 
 ## Safety
