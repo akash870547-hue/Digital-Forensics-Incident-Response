@@ -1,0 +1,10 @@
+timestamp,source,event,actor,assessment
+2026-09-14T10:02:11Z,WindowsEvent:1001,User opened macro-enabled invoice document,ACME\\jsmith,Initial execution opportunity
+2026-09-14T10:02:19Z,WindowsEvent:4688;Sysmon:1,WINWORD spawned PowerShell,ACME\\jsmith,High-value process lineage
+2026-09-14T10:02:24Z,WindowsEvent:4104,PowerShell script block executed,ACME\\jsmith,Suspicious follow-on activity
+2026-09-14T10:03:01Z,WindowsEvent:4688;Sysmon:1,PowerShell spawned rundll32,ACME\\jsmith,Living-off-the-land execution pattern
+2026-09-14T10:03:07Z,Sysmon:3,Outbound connection to 203.0.113.77:443,ACME\\jsmith,Synthetic C2-like network event
+2026-09-14T10:04:17Z,WindowsEvent:7045,Simulated service persistence created,SYSTEM,Persistence indicator
+2026-09-14T10:06:03Z,WindowsEvent:4656;Sysmon:11,Staging archive created,ACME\\jsmith,Potential collection/staging
+2026-09-14T10:11:40Z,WindowsEvent:4663,Documents modified/renamed,ACME\\jsmith,Impact phase in simulation
+2026-09-14T10:13:05Z,WindowsEvent:1002,Simulated ransom note opened,ACME\\jsmith,Confirms simulated impact

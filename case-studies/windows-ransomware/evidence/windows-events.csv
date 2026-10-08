@@ -1,0 +1,9 @@
+timestamp,event_id,host,user,process,parent_process,action,details
+2026-09-14T10:02:11Z,1001,FIN-WS01,ACME\\jsmith,WINWORD.EXE,explorer.exe,document_opened,Invoice_8841.docm
+2026-09-14T10:02:19Z,4688,FIN-WS01,ACME\\jsmith,powershell.exe,WINWORD.EXE,process_created,EncodedCommand present
+2026-09-14T10:02:24Z,4104,FIN-WS01,ACME\\jsmith,powershell.exe,powershell.exe,script_block,Simulated download-and-execute sequence
+2026-09-14T10:03:01Z,4688,FIN-WS01,ACME\\jsmith,rundll32.exe,powershell.exe,process_created,Simulated payload execution
+2026-09-14T10:04:17Z,7045,FIN-WS01,SYSTEM,svchost.exe,services.exe,service_created,Simulated persistence service
+2026-09-14T10:06:03Z,4656,FIN-WS01,ACME\\jsmith,powershell.exe,powershell.exe,file_write,C:\\Users\\jsmith\\AppData\\Local\\Temp\\invoice-cache.zip
+2026-09-14T10:11:40Z,4663,FIN-WS01,ACME\\jsmith,powershell.exe,powershell.exe,files_modified,12 documents renamed in simulation
+2026-09-14T10:13:05Z,1002,FIN-WS01,ACME\\jsmith,notepad.exe,explorer.exe,file_opened,READ_ME_SIMULATED.txt

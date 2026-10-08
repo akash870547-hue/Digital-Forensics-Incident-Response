@@ -1,0 +1,40 @@
+{
+  "case_id": "DFIR-2026-001",
+  "synthetic": true,
+  "indicators": {
+    "ipv4": [
+      {
+        "value": "203.0.113.77",
+        "type": "destination_ip",
+        "source": "sysmon-events.csv",
+        "first_seen": "2026-09-14T10:03:07Z",
+        "confidence": "high"
+      }
+    ],
+    "domains": [],
+    "file_names": [
+      {
+        "value": "invoice-cache.zip",
+        "type": "staging_archive",
+        "source": "windows-events.csv / sysmon-events.csv",
+        "confidence": "medium"
+      },
+      {
+        "value": "stage.dll",
+        "type": "simulated_payload",
+        "source": "sysmon-events.csv",
+        "confidence": "medium"
+      }
+    ],
+    "paths": [
+      "C:\\Users\\jsmith\\AppData\\Local\\Temp\\invoice-cache.zip",
+      "C:\\Users\\jsmith\\AppData\\Local\\Temp\\stage.dll"
+    ],
+    "registry_or_service": [
+      {
+        "value": "Simulated persistence service",
+        "source": "WindowsEvent:7045"
+      }
+    ]
+  }
+}

@@ -1,0 +1,6 @@
+timestamp,event_id,host,user,image,parent_image,destination_ip,destination_port,command_line
+2026-09-14T10:02:19Z,1,FIN-WS01,ACME\\jsmith,C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe,C:\\Program Files\\Microsoft Office\\root\\Office16\\WINWORD.EXE,,,"powershell.exe -EncodedCommand <SYNTHETIC>"
+2026-09-14T10:03:01Z,1,FIN-WS01,ACME\\jsmith,C:\\Windows\\System32\\rundll32.exe,C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe,,,"rundll32.exe C:\\Users\\jsmith\\AppData\\Local\\Temp\\stage.dll,Start"
+2026-09-14T10:03:07Z,3,FIN-WS01,ACME\\jsmith,C:\\Windows\\System32\\rundll32.exe,C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe,203.0.113.77,443,
+2026-09-14T10:05:52Z,1,FIN-WS01,ACME\\jsmith,C:\\Windows\\System32\\cmd.exe,C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe,,,"cmd.exe /c mkdir C:\\Users\\jsmith\\AppData\\Local\\Temp\\stage"
+2026-09-14T10:06:03Z,11,FIN-WS01,ACME\\jsmith,C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe,C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe,,,"File created: invoice-cache.zip"
