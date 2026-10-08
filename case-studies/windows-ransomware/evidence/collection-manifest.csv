@@ -1,0 +1,5 @@
+evidence_id,source,artifact,format,synthetic,collection_notes
+E-001,FIN-WS01,windows-events.csv,CSV,true,Synthetic Windows event export for process/file activity
+E-002,FIN-WS01,sysmon-events.csv,CSV,true,Synthetic Sysmon-style process/network/file telemetry
+E-003,ANALYST,incident-timeline.csv,CSV,true,Analyst-normalized timeline derived from E-001 and E-002
+E-004,ANALYST,indicators.json,JSON,true,IOC inventory derived from supplied synthetic telemetry
