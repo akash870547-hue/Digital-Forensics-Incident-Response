@@ -22,5 +22,17 @@ jobs:
       - name: Validate synthetic case
         run: python scripts/validate_case.py
 
+      - name: Rebuild normalized timeline
+        run: |
+          python scripts/build_timeline.py             case-studies/windows-ransomware/evidence/windows-events.csv             case-studies/windows-ransomware/evidence/sysmon-events.csv
+
+      - name: Verify generated timeline
+        run: test -s case-studies/windows-ransomware/timeline/generated-timeline.csv
+
+      - name: Run IOC extractor
+        run: |
+          python scripts/extract_iocs.py case-studies/windows-ransomware/evidence/ | tee /tmp/iocs.txt
+          grep -q "203.0.113.77" /tmp/iocs.txt
+
       - name: Validate IOC JSON
         run: python -m json.tool case-studies/windows-ransomware/ioc/indicators.json >/dev/null
